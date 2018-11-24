@@ -1,0 +1,68 @@
+/* Dimensiona as colunas da página, mantesndo elas responsivas */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo do body*/
+
+body {
+    font-family: "Courier New", Courier, monospace ;
+}
+
+
+
+/* Estilo do cabeçalho */
+.header {
+    
+    background-color: #f1f1f1;
+    padding: 5px;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+/* Cria duas colunas iguais que se alinham lado a lado usando o float */
+.column {
+    float: left;
+    padding: 10px;
+    height: 700px;  
+      
+
+}
+
+/* Coluna Lateral direita*/
+.column.side {
+    width: 25%;
+    height: 700px;
+    padding: 15px;
+}
+
+/* MColuna lateral esquerda */
+.column.middle {
+    width: 75%;
+    background-image: url("fundo.jpg");
+
+}
+
+
+/* Limpa os elementos flutuantes depois das colunas */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* estilo do rodapé */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Layout responsivo - faz as três colunas ficarem no topo ou invez de lado a lado */
+@media (max-width: 600px) {
+    .column.side, .column.middle, .menu {
+        width: 100%;
+    }
+}
